@@ -4,6 +4,7 @@
     "description": "ARMIPS syntax support for ARMv4 (GBA)",
     "version": "1.0.0",
     "publisher": "ajarmar",
+    "icon": "images/icon.png",
     "engines": {
         "vscode": "^1.41.0"
     },
