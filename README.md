@@ -1,4 +1,4 @@
-# armips README
+# vscode-armips README
 
 Syntax highlighting for GBA assembly code using the [ARMIPS](https://github.com/Kingcom/armips) assembler.
 
@@ -13,9 +13,12 @@ Includes syntax highlighting for
 - Directives
 - Labels
     - Different highlighting for global, static and local labels
+    
+Also:
+
 - Folding on .area/.endarea pairs
 
-\!\[Syntax highlighting example\]\(images/example.png\)
+![Syntax highlighting example](images/example.png)
 
 ## Known Issues
 
