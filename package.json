@@ -2,7 +2,7 @@
     "name": "armips",
     "displayName": "ARMIPS",
     "description": "ARMIPS syntax support for ARMv4 (GBA)",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "publisher": "ajarmar",
     "icon": "images/icon.png",
     "engines": {
@@ -16,16 +16,25 @@
         "url": "https://github.com/Ajarmar/vscode-armips.git"
     },
     "contributes": {
-        "languages": [{
-            "id": "armips",
-            "aliases": ["ARMIPS", "armips"],
-            "extensions": [".asm"],
-            "configuration": "./language-configuration.json"
-        }],
-        "grammars": [{
-            "language": "armips",
-            "scopeName": "source.armips",
-            "path": "./syntaxes/armips.tmLanguage.json"
-        }]
+        "languages": [
+            {
+                "id": "armips",
+                "aliases": [
+                    "ARMIPS",
+                    "armips"
+                ],
+                "extensions": [
+                    ".asm"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "armips",
+                "scopeName": "source.armips",
+                "path": "./syntaxes/armips.tmLanguage.json"
+            }
+        ]
     }
 }
