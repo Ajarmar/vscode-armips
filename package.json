@@ -3,7 +3,7 @@
     "displayName": "ARMIPS",
     "description": "ARMIPS syntax support for ARMv4 (GBA)",
     "version": "1.0.0",
-    "publisher": "Ajarmar",
+    "publisher": "ajarmar",
     "engines": {
         "vscode": "^1.41.0"
     },
