@@ -87,7 +87,7 @@
 				},
 				{
 					"name": "keyword.operator.armips",
-					"match": "[\\+\\-\\*\\/(::)]"
+					"match": "<<|>>|[=!><]=|[+\\-*/%|&\\^<>!~]"
 				},
 				{
 					"name": "keyword.operator.instruction.thumb.armips",
