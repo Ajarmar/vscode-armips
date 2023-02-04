@@ -3,13 +3,16 @@
 	"name": "ARMIPS",
 	"patterns": [
 		{
-			"include": "#keywords"
+			"include": "#comments"
 		},
 		{
 			"include": "#strings"
 		},
 		{
-			"include": "#comments"
+			"include": "#supports"
+		},
+		{
+			"include": "#keywords"
 		},
 		{
 			"include": "#variables"
@@ -19,21 +22,50 @@
 		},
 		{
 			"include": "#constants"
-		},
-		{
-			"include": "#supports"
 		}
 	],
 	"repository": {
+		"comments": {
+			"patterns": [
+				{
+					"name": "comment.line.armips",
+					"match": "(//|;).*$"
+				},	
+				{
+					"name": "comment.block.armips",
+					"begin": "/\\*",
+					"end": "\\*/"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.armips",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.armips",
+					"match": "\\\\."
+				}
+			]
+		},
+		"supports": {
+			"patterns": [
+				{
+					"name": "support.function.noargs.armips",
+					"match": "(?i)\\b(version|endianness|outputname|orga?|headersize|is(arm|thumb))(?=\\(\\))"
+				},
+				{
+					"name": "support.function.args.armips",
+					"match": "(?i)\\b((orga?|headersize)(?=\\()(?!\\))|(defined|file(exists|size)|to(string|hex)|round|int|float|frac|abs|hi|lo|min|max|strlen|substr|regex_(match|search|extract)|r?find|read(byte|[su](8|16|32|64))|ascii)(?=\\())"
+				}
+			]
+		},
 		"keywords": {
 			"patterns": [
 				{
 					"name": "keyword.control.armips",
 					"match": "(?i)\\b(equ)\\b"
-				},
-				{
-					"name": "keyword.control.directive.normal.armips",
-					"match": "(?i)(?<=^|\\s)(\\.(open|close|func|endfunc|ascii|loadtable|string|area|endarea|importlib|openfile|create|createfile|closefile|headersize|include|align|aligna|fill|skip|incbin|import|byte|asciiz|halfword|word|doubleword|float|double|table|stringn|str|strn|sjis|sjisn|if|ifdef|ifndef|else|elseif|elseifdef|elseifndef|endif|definelabel|function|warning|error|notice|resetdelay|fixloaddelay|loadelf|arm|thumb|pool|msg|macro|endmacro|psx|ps2|psp|n64|rsp|gba|nds|3ds|arm\\.big|arm\\.little)|\\.?(defs|orga?|dc?b|dh|dc?w|dc?d|dcq))\\b"
 				},
 				{
 					"name": "keyword.control.directive.onoff.armips",
@@ -50,8 +82,12 @@
 					]
 				},
 				{
+					"name": "keyword.control.directive.normal.armips",
+					"match": "(?i)(?<=^|\\s)(\\.(open|close|func|endfunc|ascii|loadtable|string|area|endarea|importlib|openfile|create|createfile|closefile|headersize|include|align|aligna|fill|skip|incbin|import|byte|asciiz|halfword|word|doubleword|float|double|table|stringn|str|strn|sjis|sjisn|if|ifdef|ifndef|else|elseif|elseifdef|elseifndef|endif|definelabel|function|warning|error|notice|resetdelay|fixloaddelay|loadelf|arm|thumb|pool|msg|macro|endmacro|psx|ps2|psp|n64|rsp|gba|nds|3ds|arm\\.big|arm\\.little)|\\.?(defs|orga?|dc?b|dh|dc?w|dc?d|dcq))\\b"
+				},
+				{
 					"name": "keyword.operator.armips",
-					"match": "[\\+\\-\\*(::)]|/(?![/*])"
+					"match": "[\\+\\-\\*\\/(::)]"
 				},
 				{
 					"name": "keyword.operator.instruction.thumb.armips",
@@ -60,30 +96,6 @@
 				{
 					"name": "keyword.operator.instruction.arm.armips",
 					"match": "(?i)(?<=^|\\s)(adc|add|and|bic|bl|bx|b|cdp|cmn|cmp|eor|ldc|ldm|ldr|mcr|mla|mov|mrc|mrs|msr|mul|mvn|orr|rsb|rsc|sbc|stc|stm|str|sub|swi|swp|teq|tst)(eq|ne|cs|hs|cc|lo|mi|pl|vs|vc|hi|ls|ge|lt|gt|le|al|nv)?(?=\\s|$)"
-				}
-			]
-		},
-		"strings": {
-			"name": "string.quoted.double.armips",
-			"begin": "\"",
-			"end": "\"",
-			"patterns": [
-				{
-					"name": "constant.character.escape.armips",
-					"match": "\\\\."
-				}
-			]
-		},
-		"comments": {
-			"patterns": [
-				{
-					"name": "comment.line.armips",
-					"match": "(//|;).*$"
-				},	
-				{
-					"name": "comment.block.armips",
-					"begin": "/\\*",
-					"end": "\\*/"
 				}
 			]
 		},
@@ -144,18 +156,6 @@
 				{
 					"name": "constant.numeric.exp.armips",
 					"match": "(?i)#?-?\\b[0-9\\.]+e[\\+\\-]?[0-9]+\\b"
-				}
-			]
-		},
-		"supports": {
-			"patterns": [
-				{
-					"name": "support.function.noargs.armips",
-					"match": "(?i)\\b(version|endianness|outputname|orga?|headersize|is(arm|thumb))(?=\\(\\))"
-				},
-				{
-					"name": "support.function.args.armips",
-					"match": "(?i)\\b((orga?|headersize)(?=\\()(?!\\))|(defined|file(exists|size)|to(string|hex)|round|int|float|frac|abs|hi|lo|min|max|strlen|substr|regex_(match|search|extract)|r?find|read(byte|[su](8|16|32|64))|ascii)(?=\\())"
 				}
 			]
 		}
