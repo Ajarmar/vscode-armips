@@ -97,40 +97,15 @@
 			"patterns": [
 				{
 					"name": "entity.name.function.global.armips",
-					"match": "^\\s*[a-zA-Z_][\\w_]*:\\s*"
+					"match": "[a-zA-Z_][\\w_]*:?"
 				},
 				{
 					"name": "entity.name.type.static.armips",
-					"match": "^\\s*@[a-zA-Z_][\\w_]*:\\s*"
+					"match": "@[a-zA-Z_][\\w_]*:?"
 				},
 				{
 					"name": "entity.name.tag.local.armips",
-					"match": "^\\s*@@[a-zA-Z_][\\w_]*:\\s*"
-				},
-				{
-					"begin": "(?i)^\\s*(bcc|bcs|beq|bge|bgt|bhi|ble|bls|blt|bmi|bne|bpl|bvc|bvs|b|bl|bx)\\s*",
-					"end": "$",
-					"patterns": [
-						{
-							"name": "variable.other.register.armips",
-							"match": "(?i)\\b(r[0-9]|r1[0-5]|sp|lr|pc)\\b"
-						},
-						{
-							"name": "entity.name.tag.local.armips",
-							"match": "@@[a-zA-Z_][\\w_]*"
-						},
-						{
-							"name": "entity.name.type.static.armips",
-							"match": "@[a-zA-Z_][\\w_]*"
-						},
-						{
-							"name": "entity.name.function.global.armips",
-							"match": "[a-zA-Z_][\\w_]*"
-						},
-						{
-							"include": "#comments"
-						}
-					]
+					"match": "@@[a-zA-Z_][\\w_]*:?"
 				}
 			]
 		},
