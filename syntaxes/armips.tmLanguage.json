@@ -55,11 +55,11 @@
 				},
 				{
 					"name": "keyword.operator.instruction.thumb.armips",
-					"match": "(?i)\\b(adc|add|and|asr|b|bcc|bcs|beq|bge|bgt|bhi|ble|bls|blt|bmi|bne|bpl|bvc|bvs|bic|bl|bx|cmn|cmp|eor|ldmia|ldr|ldrb|ldrh|lsl|ldsb|ldsh|lsr|mov|mul|mvn|neg|orr|pop|push|ror|sbc|stmia|str|strb|strh|swi|sub|tst)\\b"
+					"match": "(?i)(?<=^|\\s)(adc|add|and|asr|bl|bx|b(eq|ne|cs|hs|cc|lo|mi|pl|vs|vc|hi|ls|ge|lt|gt|le|al|nv)?|b|cmn|cmp|eor|ldmia|ldr|ldrb|ldrh|lsl|ldsb|ldsh|lsr|mov|mul|mvn|neg|orr|pop|push|ror|sbc|stmia|str|strb|strh|swi|sub|tst)(?=\\s|$)"
 				},
 				{
 					"name": "keyword.operator.instruction.arm.armips",
-					"match": "(?i)\\b(adc|add|and|b|bic|bl|bx|cdp|cmn|cmp|eor|ldc|ldm|ldr|mcr|mla|mov|mrc|mrs|msr|mul|mvn|orr|rsb|rsc|sbc|stc|stm|str|sub|swi|swp|teq|tst)(eq|ne|cs|cc|mi|pl|vs|vc|hi|ls|ge|lt|gt|le|al)\\b"
+					"match": "(?i)(?<=^|\\s)(adc|add|and|bic|bl|bx|b|cdp|cmn|cmp|eor|ldc|ldm|ldr|mcr|mla|mov|mrc|mrs|msr|mul|mvn|orr|rsb|rsc|sbc|stc|stm|str|sub|swi|swp|teq|tst)(eq|ne|cs|hs|cc|lo|mi|pl|vs|vc|hi|ls|ge|lt|gt|le|al|nv)?(?=\\s|$)"
 				}
 			]
 		},
