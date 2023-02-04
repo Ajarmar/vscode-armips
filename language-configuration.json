@@ -18,7 +18,19 @@
         ["(", ")"],
         ["\"", "\""],
         ["'", "'"],
-        [".area",".endarea"]
+        [".area", "\n.endarea"],
+        [".create", ".close"],
+        [".createfile", ".closefile"],
+        [".open", ".close"],
+        [".openfile", ".closefile"],
+        [".if", ".endif"],
+        [".ifdef", ".endif"],
+        [".ifndef", ".endif"],
+        [".func", ".endfunc"],
+        [".function", ".endfunction"],
+        [".macro", ".endmacro"],
+        [".region", ".endregion"],
+        [".autoregion", ".endautoregion"]
     ],
     // symbols that that can be used to surround a selection
     "surroundingPairs": [
@@ -30,8 +42,8 @@
     ],
     "folding": {
         "markers": {
-            "start": "^\\s*.area\\b",
-            "end": "^\\s*.endarea\\b"
+            "start": "^\\s*\\.(area|create(file)?|open(file)?|ifn?(def)?|func(tion)?|macro|(auto)?region)(?=\\s|$)",
+            "end": "^\\s*\\.(close(file)?|end(area|if|func|macro|end(auto)?region))(?=\\s|$)"
         }
     }
 }
