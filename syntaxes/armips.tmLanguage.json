@@ -83,7 +83,7 @@
 				},
 				{
 					"name": "keyword.control.directive.normal.armips",
-					"match": "(?i)(?<=^|\\s)(\\.(open|close|func|endfunc|ascii|loadtable|string|area|endarea|importlib|openfile|create|createfile|closefile|headersize|include|align|aligna|fill|skip|incbin|import|byte|asciiz|halfword|word|doubleword|float|double|table|stringn|str|strn|sjis|sjisn|if|ifdef|ifndef|else|elseif|elseifdef|elseifndef|endif|definelabel|function|warning|error|notice|resetdelay|fixloaddelay|loadelf|arm|thumb|pool|msg|macro|endmacro|psx|ps2|psp|n64|rsp|gba|nds|3ds|arm\\.big|arm\\.little)|\\.?(defs|orga?|dc?b|dh|dc?w|dc?d|dcq))\\b"
+					"match": "(?i)(?<=^|\\s)(\\.(open|close|func|endfunc|expfunc|ascii|loadtable|string|area|endarea|region|endregion|autoregion|endautoregion|defineregion|importobj|importlib|openfile|create|createfile|closefile|headersize|include|align|aligna|fill|skip|incbin|import|byte|asciiz|halfword|word|doubleword|float|double|table|stringn|str|strn|sjis|sjisn|if|ifdef|ifndef|else|elseif|elseifdef|elseifndef|endif|definelabel|function|endfunction|warning|error|notice|resetdelay|fixloaddelay|loadelf|arm|thumb|pool|msg|macro|endmacro|psx|ps2|psp|n64|rsp|gba|nds|3ds|arm\\.big|arm\\.little|saturn|32x)|\\.?(defs|orga?|dc?b|dh|dc?w|dc?d|dcq))\\b"
 				},
 				{
 					"name": "keyword.operator.armips",
