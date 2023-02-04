@@ -41,7 +41,7 @@
 		"strings": {
 			"name": "string.quoted.double.armips",
 			"begin": "\"",
-			"end": "\"",
+			"end": "\"|$",
 			"patterns": [
 				{
 					"name": "constant.character.escape.armips",
