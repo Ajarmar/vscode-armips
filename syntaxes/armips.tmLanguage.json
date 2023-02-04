@@ -137,23 +137,11 @@
 			"patterns": [
 				{
 					"name": "support.function.noargs.armips",
-					"match": "(?i)\\b(version\\(\\)|endianness\\(\\)|outputname\\(\\)|orga?\\(\\)|headersize\\(\\)|is(arm|thumb)\\(\\))"
+					"match": "(?i)\\b(version|endianness|outputname|orga?|headersize|is(arm|thumb))(?=\\(\\))"
 				},
 				{
 					"name": "support.function.args.armips",
-					"begin": "(?i)defined\\(|file(exists|size)\\(|to(string|hex)\\(|round\\(|int\\(|float\\(|frac\\(|abs\\(|hi\\(|lo\\(|min\\(|max\\(|strlen\\(|substr\\(|regex_(match|search|extract)\\(|r?find\\(|read(byte|u8|u16|u32|u64|s8|s16|s32|s64|ascii)\\(",
-					"end": "\\)",
-					"patterns": [
-						{
-							"include": "#constants"
-						},
-						{
-							"include": "#variables"
-						},
-						{
-							"include": "#strings"
-						}
-					]
+					"match": "(?i)\\b((orga?|headersize)(?=\\()(?!\\))|(defined|file(exists|size)|to(string|hex)|round|int|float|frac|abs|hi|lo|min|max|strlen|substr|regex_(match|search|extract)|r?find|read(byte|[su](8|16|32|64))|ascii)(?=\\())"
 				}
 			]
 		}
