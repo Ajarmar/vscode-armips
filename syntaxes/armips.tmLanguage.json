@@ -29,11 +29,11 @@
 			"patterns": [
 				{
 					"name": "keyword.control.armips",
-					"match": "\\b(equ|org|orga|defs|db|dcb|dh|dcw|dw|dcd|dd|dcq)\\b"
+					"match": "(?i)\\b(equ|org|orga|defs|db|dcb|dh|dcw|dw|dcd|dd|dcq)\\b"
 				},
 				{
 					"name": "keyword.control.directive.armips",
-					"match": "\\.(open|close|func|endfunc|ascii|loadtable|string|area|endarea|importlib|openfile|create|createfile|closefile|org|orga|headersize|include|align|aligna|fill|skip|incbin|import|byte|db|dcb|asciiz|halfword|dh|dcw|word|dw|dcd|doubleword|dd|dcq|float|double|table|stringn|str|strn|sjis|sjisn|if|ifdef|ifndef|else|elseif|elseifdef|elseifndef|endif|definelabel|function|warning|error|notice|erroronwarning|relativeinclude|nocash|sym|resetdelay|fixloaddelay|loadelf|arm|thumb|pool|msg|macro|endmacro|psx|ps2|psp|n64|rsp|gba|nds|3ds|arm\\.big|arm\\.little)\\b"
+					"match": "(?i)\\.(open|close|func|endfunc|ascii|loadtable|string|area|endarea|importlib|openfile|create|createfile|closefile|org|orga|headersize|include|align|aligna|fill|skip|incbin|import|byte|db|dcb|asciiz|halfword|dh|dcw|word|dw|dcd|doubleword|dd|dcq|float|double|table|stringn|str|strn|sjis|sjisn|if|ifdef|ifndef|else|elseif|elseifdef|elseifndef|endif|definelabel|function|warning|error|notice|erroronwarning|relativeinclude|nocash|sym|resetdelay|fixloaddelay|loadelf|arm|thumb|pool|msg|macro|endmacro|psx|ps2|psp|n64|rsp|gba|nds|3ds|arm\\.big|arm\\.little)\\b"
 				},
 				{
 					"name": "keyword.operator.armips",
@@ -41,11 +41,11 @@
 				},
 				{
 					"name": "keyword.operator.instruction.thumb.armips",
-					"match": "\\b(adc|add|and|asr|b|bcc|bcs|beq|bge|bgt|bhi|ble|bls|blt|bmi|bne|bpl|bvc|bvs|bic|bl|bx|cmn|cmp|eor|ldmia|ldr|ldrb|ldrh|lsl|ldsb|ldsh|lsr|mov|mul|mvn|neg|orr|pop|push|ror|sbc|stmia|str|strb|strh|swi|sub|tst|ADC|ADD|AND|ASR|B|BCC|BCS|BEQ|BGE|BGT|BHI|BLE|BLS|BLT|BMI|BNE|BPL|BVC|BVS|BIC|BL|BX|CMN|CMP|EOR|LDMIA|LDR|LDRB|LDRH|LSL|LDSB|LDSH|LSR|MOV|MUL|MVN|NEG|ORR|POP|PUSH|ROR|SBC|STMIA|STR|STRB|STRH|SWI|SUB|TST)\\b"
+					"match": "(?i)\\b(adc|add|and|asr|b|bcc|bcs|beq|bge|bgt|bhi|ble|bls|blt|bmi|bne|bpl|bvc|bvs|bic|bl|bx|cmn|cmp|eor|ldmia|ldr|ldrb|ldrh|lsl|ldsb|ldsh|lsr|mov|mul|mvn|neg|orr|pop|push|ror|sbc|stmia|str|strb|strh|swi|sub|tst)\\b"
 				},
 				{
 					"name": "keyword.operator.instruction.arm.armips",
-					"match": "\\b(adc|add|and|b|bic|bl|bx|cdp|cmn|cmp|eor|ldc|ldm|ldr|mcr|mla|mov|mrc|mrs|msr|mul|mvn|orr|rsb|rsc|sbc|stc|stm|str|sub|swi|swp|teq|tst|ADC|ADD|AND|B|BIC|BL|BX|CDP|CMN|CMP|EOR|LDC|LDM|LDR|MCR|MLA|MOV|MRC|MRS|MSR|MUL|MVN|ORR|RSB|RSC|SBC|STC|STM|STR|SUB|SWI|SWP|TEQ|TST)(eq|ne|cs|cc|mi|pl|vs|vc|hi|ls|ge|lt|gt|le|al|EQ|NE|CS|CC|MI|PL|VS|VC|HI|LS|GE|LT|GT|LE|AL)\\b"
+					"match": "(?i)\\b(adc|add|and|b|bic|bl|bx|cdp|cmn|cmp|eor|ldc|ldm|ldr|mcr|mla|mov|mrc|mrs|msr|mul|mvn|orr|rsb|rsc|sbc|stc|stm|str|sub|swi|swp|teq|tst)(eq|ne|cs|cc|mi|pl|vs|vc|hi|ls|ge|lt|gt|le|al)\\b"
 				}
 			]
 		},
@@ -108,12 +108,12 @@
 					"match": "^\\s*@@[a-zA-Z_][\\w_]*:\\s*"
 				},
 				{
-					"begin": "^\\s*(bcc|bcs|beq|bge|bgt|bhi|ble|bls|blt|bmi|bne|bpl|bvc|bvs|b|bl|bx|BCC|BCS|BEQ|BGE|BGT|BHI|BLE|BLS|BLT|BMI|BNE|BPL|BVC|BVS|B|BL|BX)\\s*",
+					"begin": "(?i)^\\s*(bcc|bcs|beq|bge|bgt|bhi|ble|bls|blt|bmi|bne|bpl|bvc|bvs|b|bl|bx)\\s*",
 					"end": "$",
 					"patterns": [
 						{
 							"name": "variable.other.register.armips",
-							"match": "\\b(r[0-9]|r1[0-5]|sp|lr|pc)\\b"
+							"match": "(?i)\\b(r[0-9]|r1[0-5]|sp|lr|pc)\\b"
 						},
 						{
 							"name": "entity.name.tag.local.armips",
@@ -142,19 +142,19 @@
 				},
 				{
 					"name": "constant.numeric.hex.armips",
-					"match": "#?-?(0x[0-9a-fA-F\\.]+|[0-9a-fA-F\\.]+h)\\b"
+					"match": "(?i)#?-?(0x[0-9A-F\\.]+|[0-9A-F\\.]+h)\\b"
 				},
 				{
 					"name": "constant.numeric.oct.armips",
-					"match": "#?-?(0o[0-7\\.]+|[0-7\\.]+o)\\b"
+					"match": "(?i)#?-?(0o[0-7\\.]+|[0-7\\.]+o)\\b"
 				},
 				{
 					"name": "constant.numeric.hex.armips",
-					"match": "#?-?(0b[01\\.]+|[01\\.]+b)\\b"
+					"match": "(?i)#?-?(0b[01\\.]+|[01\\.]+b)\\b"
 				},
 				{
 					"name": "constant.numeric.exp.armips",
-					"match": "#?-?\\b[0-9\\.]+e[\\+\\-]?[0-9]+\\b"
+					"match": "(?i)#?-?\\b[0-9\\.]+e[\\+\\-]?[0-9]+\\b"
 				}
 			]
 		},
@@ -162,11 +162,11 @@
 			"patterns": [
 				{
 					"name": "support.function.noargs.armips",
-					"match": "\\b(version\\(\\)|endianness\\(\\)|outputname\\(\\)|orga?\\(\\)|headersize\\(\\)|is(arm|thumb)\\(\\))"
+					"match": "(?i)\\b(version\\(\\)|endianness\\(\\)|outputname\\(\\)|orga?\\(\\)|headersize\\(\\)|is(arm|thumb)\\(\\))"
 				},
 				{
 					"name": "support.function.args.armips",
-					"begin": "defined\\(|file(exists|size)\\(|to(string|hex)\\(|round\\(|int\\(|float\\(|frac\\(|abs\\(|hi\\(|lo\\(|min\\(|max\\(|strlen\\(|substr\\(|regex_(match|search|extract)\\(|r?find\\(|read(byte|u8|u16|u32|u64|s8|s16|s32|s64|ascii)\\(",
+					"begin": "(?i)defined\\(|file(exists|size)\\(|to(string|hex)\\(|round\\(|int\\(|float\\(|frac\\(|abs\\(|hi\\(|lo\\(|min\\(|max\\(|strlen\\(|substr\\(|regex_(match|search|extract)\\(|r?find\\(|read(byte|u8|u16|u32|u64|s8|s16|s32|s64|ascii)\\(",
 					"end": "\\)",
 					"patterns": [
 						{
