@@ -8,7 +8,7 @@ Includes syntax highlighting for
 
 - Strings
 - Constants
-- Variables defined with the __equ__ directive
+- Variables defined with the `equ` directive
     - Although ARMIPS supports upper/lowercase characters, numbers and underscores in variable names, variable names will not be highlighted if they use lowercase characters (because otherwise every single word would be considered a variable name)
 - Directives
 - Labels
@@ -16,13 +16,9 @@ Includes syntax highlighting for
     
 Also:
 
-- Folding on .area/.endarea pairs
+- Folding on blocks of `.area`, `.create`, `.open`, `.if`, `.func`, `.macro`, and `.region`
 
 ![Syntax highlighting example](images/example.png)
-
-## Known Issues
-
-- Branch instructions are not recognized as instructions
 
 ## Release Notes
 
