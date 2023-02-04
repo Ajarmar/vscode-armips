@@ -29,11 +29,11 @@
 			"patterns": [
 				{
 					"name": "keyword.control.armips",
-					"match": "(?i)\\b(equ|org|orga|defs|db|dcb|dh|dcw|dw|dcd|dd|dcq)\\b"
+					"match": "(?i)\\b(equ)\\b"
 				},
 				{
 					"name": "keyword.control.directive.normal.armips",
-					"match": "(?i)\\.(open|close|func|endfunc|ascii|loadtable|string|area|endarea|importlib|openfile|create|createfile|closefile|org|orga|headersize|include|align|aligna|fill|skip|incbin|import|byte|db|dcb|asciiz|halfword|dh|dcw|word|dw|dcd|doubleword|dd|dcq|float|double|table|stringn|str|strn|sjis|sjisn|if|ifdef|ifndef|else|elseif|elseifdef|elseifndef|endif|definelabel|function|warning|error|notice|resetdelay|fixloaddelay|loadelf|arm|thumb|pool|msg|macro|endmacro|psx|ps2|psp|n64|rsp|gba|nds|3ds|arm\\.big|arm\\.little)\\b"
+					"match": "(?i)(?<=^|\\s)(\\.(open|close|func|endfunc|ascii|loadtable|string|area|endarea|importlib|openfile|create|createfile|closefile|headersize|include|align|aligna|fill|skip|incbin|import|byte|asciiz|halfword|word|doubleword|float|double|table|stringn|str|strn|sjis|sjisn|if|ifdef|ifndef|else|elseif|elseifdef|elseifndef|endif|definelabel|function|warning|error|notice|resetdelay|fixloaddelay|loadelf|arm|thumb|pool|msg|macro|endmacro|psx|ps2|psp|n64|rsp|gba|nds|3ds|arm\\.big|arm\\.little)|\\.?(defs|orga?|dc?b|dh|dc?w|dc?d|dcq))\\b"
 				},
 				{
 					"name": "keyword.control.directive.onoff.armips",
