@@ -156,6 +156,10 @@
 				{
 					"name": "constant.numeric.exp.armips",
 					"match": "(?i)#?-?\\b[0-9\\.]+e[\\+\\-]?[0-9]+\\b"
+				},
+				{
+					"name": "constant.numeric.org.armips",
+					"match": "\\."
 				}
 			]
 		}
