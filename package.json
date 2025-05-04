@@ -2,7 +2,7 @@
     "name": "armips",
     "displayName": "ARMIPS",
     "description": "ARMIPS syntax support for ARMv4 (GBA)",
-    "version": "1.0.1",
+    "version": "1.1.0",
     "publisher": "ajarmar",
     "icon": "images/icon.png",
     "engines": {
