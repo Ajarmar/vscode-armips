@@ -18,7 +18,7 @@ Also:
 
 - Folding on blocks of `.area`, `.create`, `.open`, `.if`, `.func`, `.macro`, and `.region`
 
-![Syntax highlighting example](images/example.png)
+![Syntax highlighting example](images/example_v1_1_0.png)
 
 ## Release Notes
 
